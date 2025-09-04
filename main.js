@@ -1,12 +1,12 @@
 // Variables
 const barsBtn = document.querySelector(".bars");
 const closeBtn = document.querySelector(".close");
-const headerNavbar = document.querySelector(".navbar");
+const navOne = document.querySelector(".nav-one");
 
 barsBtn.onclick = function () {
-  headerNavbar.style.display = "block";
+  navOne.style.display = "flex";
 };
 
 closeBtn.onclick = function () {
-  headerNavbar.style.display = "none";
+  navOne.style.display = "none";
 };

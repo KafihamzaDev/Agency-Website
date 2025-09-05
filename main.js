@@ -10,3 +10,5 @@ barsBtn.onclick = function () {
 closeBtn.onclick = function () {
   navOne.style.display = "none";
 };
+
+// change header content when window scroll down

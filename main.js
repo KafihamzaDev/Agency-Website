@@ -20,6 +20,7 @@ const ulNavOne = document.querySelectorAll(".navbar-list-one .navbar-link");
 const ulNavTwo = document.querySelectorAll(".navbar-list-two .navbar-link");
 const headerBtn = document.querySelector(".header-btn");
 
+// change header content when window scroll down
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 100) {
     header.style.backgroundColor = "var(--white)";
@@ -50,4 +51,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-console.log(headerBtn);
+// slider
+const sliderImg = document.querySelectorAll(".slide");
+const sliderBtn = document.querySelectorAll(".slider-btn");
+
+console.log(sliderImg);

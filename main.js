@@ -52,7 +52,34 @@ window.addEventListener("scroll", () => {
 });
 
 // slider
-const sliderImg = document.querySelectorAll(".slide");
-const sliderBtn = document.querySelectorAll(".slider-btn");
+let slides = document.querySelectorAll(
+  ".hero .container .hero-slider .slides .slide"
+);
+let slideIndex = 0;
 
-console.log(sliderImg);
+function initSlider() {
+  slides[slideIndex].classList.add("active");
+}
+initSlider();
+
+function showSlide() {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slides[slideIndex].classList.add("active");
+}
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex === slides.length) {
+    slideIndex = 0;
+  }
+  showSlide();
+}
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  showSlide();
+}

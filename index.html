@@ -151,25 +151,15 @@
           </div>
         </div>
         <div class="hero-slider">
-          <ul class="slides">
-            <li class="slide">
-              <img src="./images/hero-slide-1.jpg" alt="" />
-            </li>
-            <li class="slide">
-              <img src="./images/hero-slide-2.jpg" alt="" />
-            </li>
-            <li class="slide">
-              <img src="./images/hero-slide-3.jpg" alt="" />
-            </li>
-          </ul>
-          <i
-            class="fa-solid fa-arrow-left one slider-btn"
-            onclick="prevSlide()"
-          ></i>
-          <i
-            class="fa-solid fa-arrow-right two slider-btn"
-            onclick="nextSlide()"
-          ></i>
+          <img src="./images/hero-slide-1.jpg" class="slide" alt="" />
+          <img src="./images/hero-slide-2.jpg" class="slide" alt="" />
+          <img src="./images/hero-slide-3.jpg" class="slide" alt="" />
+          <button class="one" onclick="prevSlide()">
+            <i class="fa-solid fa-arrow-left slider-btn"></i>
+          </button>
+          <button class="two" onclick="nextSlide()">
+            <i class="fa-solid fa-arrow-right slider-btn"></i>
+          </button>
         </div>
       </div>
     </main>

@@ -64,7 +64,6 @@ body {
   color: var(--black-coral);
   font-size: 1.6rem;
   line-height: 1.7;
-  height: 300vh;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -125,9 +124,7 @@ body {
 /* End Globale Rules  */
 
 /* Start Header  */
-body {
-  background-color: black;
-}
+
 .header .container nav .nav-one {
   position: absolute;
   box-sizing: border-box;
@@ -294,7 +291,7 @@ header .container {
 
 /* Start Hero Section  */
 .hero {
-  padding-top: 130px;
+  padding-top: 60pxpx;
 }
 .hero .container {
   height: 500px;
@@ -302,8 +299,10 @@ header .container {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .hero .container .hero-content {
-  /* text-align: center; */
-  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 .hero .container .hero-content .hero-title {
   color: var(--white);
@@ -319,7 +318,6 @@ header .container {
 .hero .container .hero-content .btn-wrapper {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
   align-items: center;
   gap: 12px;
 }
@@ -358,59 +356,94 @@ header .container {
 }
 .hero .container .hero-content .btn-wrapper .two:hover {
   transform: translateY(-4px);
+  background-color: var(--white);
+  color: var(--charcoal);
 }
 
 /* Slider  */
 .hero .container .hero-slider {
-  justify-self: end;
-  max-width: 480px;
-  width: 100%;
   position: relative;
+  width: 90%;
+  justify-self: end;
+  align-self: center;
+  height: fit-content;
 }
-.hero .container .hero-slider .slides {
+.hero .container .hero-slider .slide {
+  width: 100%;
+  display: none;
+  border-radius: var(--radius-10);
+}
+.hero .container .hero-slider .active {
+  display: block;
+}
+.hero .container .hero-slider button {
+  position: absolute;
+  background-color: var(--white_a70);
+  color: var(--charcoal);
+  font-size: 2rem;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-circle);
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+.hero .container .hero-slider button:hover {
+  background-color: var(--white);
 }
 .hero .container .hero-slider .one {
   position: absolute;
-  padding: 20px;
-  left: 20px;
   top: 50%;
+  left: 5%;
   transform: translateY(-50%);
-  color: var(--charcoal);
-  background-color: var(--white_a70);
-  padding: 12px;
-  border-radius: var(--radius-circle);
-  font-size: 2rem;
-  cursor: pointer;
-  transition: var(--transition-1);
 }
 .hero .container .hero-slider .two {
   position: absolute;
-  right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--charcoal);
-  background-color: var(--white_a70);
-  padding: 12px;
-  border-radius: var(--radius-circle);
-  font-size: 2rem;
-  cursor: pointer;
-  transition: var(--transition-1);
+  right: 5%;
 }
-.hero .container .hero-slider .one:hover,
-.hero .container .hero-slider .two:hover {
-  background-color: var(--white);
+/* Responsive */
+@media (max-width: 997px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .hero .container .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+  .hero .container .hero-slider {
+    margin-inline: auto;
+  }
 }
-.hero .container .hero-slider .slides .slide {
-  position: absolute;
-  right: 0;
-  display: none;
+.hero {
+  position: relative;
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero .container .hero-slider .slides .active {
-  display: block;
-}
-.hero .container .hero-slider .slides .slide img {
-  /* width: 450px; */
-  width: 100%;
-  border-radius: var(--radius-10);
+@media (max-width: 997px) {
+  .hero {
+    min-height: unset;
+    height: auto;
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    height: auto;
+  }
+  .hero .container .hero-slider {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 400px;
+  }
 }
 /* End Hero Section  */

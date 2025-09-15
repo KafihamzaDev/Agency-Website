@@ -52,10 +52,9 @@ window.addEventListener("scroll", () => {
 });
 
 // slider
-let slides = document.querySelectorAll(
-  ".hero .container .hero-slider .slides .slide"
-);
+let slides = document.querySelectorAll(".hero .container .hero-slider  .slide");
 let slideIndex = 0;
+console.log(slides);
 
 function initSlider() {
   slides[slideIndex].classList.add("active");

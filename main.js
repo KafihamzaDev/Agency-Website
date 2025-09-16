@@ -54,7 +54,6 @@ window.addEventListener("scroll", () => {
 // slider
 let slides = document.querySelectorAll(".hero .container .hero-slider  .slide");
 let slideIndex = 0;
-console.log(slides);
 
 function initSlider() {
   slides[slideIndex].classList.add("active");
@@ -82,3 +81,44 @@ function prevSlide() {
   }
   showSlide();
 }
+
+// add active class to icons
+let aboutBtn = document.querySelectorAll(
+  ".about .container .about-items .item button"
+);
+let aboutIcons = document.querySelectorAll(
+  ".about .container .about-items .item button i"
+);
+let aboutP = document.querySelectorAll(
+  ".about .container .about-items .item p"
+);
+let aboutSpans = document.querySelectorAll(
+  ".about .container .about-items .item button span"
+);
+console.log(aboutSpans);
+
+function addClassActive() {
+  aboutBtn.forEach((btn, index) => {
+    btn.onclick = () => {
+      if (aboutP[index].classList.contains("active")) {
+        aboutP[index].classList.remove("active");
+        aboutIcons[index].classList.remove("active");
+        aboutSpans[index].classList.remove("clicked");
+      } else {
+        aboutIcons.forEach((ico) => {
+          ico.classList.remove("active");
+          aboutIcons[index].classList.add("active");
+        });
+        aboutP.forEach((p) => {
+          p.classList.remove("active");
+          aboutP[index].classList.add("active");
+        });
+        aboutSpans.forEach((spa) => {
+          spa.classList.remove("clicked");
+          aboutSpans[index].classList.add("clicked");
+        });
+      }
+    };
+  });
+}
+addClassActive();

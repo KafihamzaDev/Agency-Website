@@ -427,11 +427,13 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
 }
 @media (max-width: 997px) {
   .hero {
     min-height: unset;
     height: auto;
+    padding-top: 100px;
     padding-bottom: 40px;
     align-items: flex-start;
   }
@@ -505,6 +507,95 @@ header .container {
   color: var(--violet-blue-crayola);
   font-weight: var(--fw-700);
 }
-.services .container .services-list .service a:hover {
-}
+
 /* End Services */
+
+/* Start About */
+.about {
+  padding-block: var(--section-padding);
+}
+.about .container {
+  text-align: center;
+}
+.about .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 150px;
+}
+.about .container img {
+  width: 500px;
+}
+@media (max-width: 997px) {
+  .about .container img {
+    max-width: 400px;
+  }
+}
+@media (max-width: 859px) {
+  .about .container img {
+    max-width: 100%;
+  }
+}
+.about .container .about-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.about .container .about-items .item {
+  padding-bottom: 20px;
+}
+.about .container .about-items .item p {
+  max-height: max-content;
+  padding-inline-start: 30px;
+  padding-block-end: 20px;
+  text-align: start;
+  display: none;
+}
+.about .container .about-items .p {
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  color: var(--violet-blue-crayola);
+  font-weight: var(--fw-700);
+  margin-block-end: 16px;
+}
+.about .container .about-items .h2 {
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  font-size: var(--fs-2);
+  text-align: start;
+  padding-bottom: 40px;
+}
+.about .container .about-items .item button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.about .container .about-items .item button .active {
+  transform: rotate(0.5turn);
+}
+.about .container .about-items .item .active {
+  display: block;
+}
+.about .container .about-items .item button span {
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  font-size: var(--fs-6);
+  transition: var(--transition-1);
+}
+.about .container .about-items .item button span.clicked {
+  color: var(--violet-blue-crayola);
+}
+.about .container .about-items .item button span:hover {
+  color: var(--violet-blue-crayola);
+}
+.about .container .about-items .item i {
+  font-size: 1.5rem;
+  color: var(--blue-crayola);
+  transition: var(--transition-1);
+}
+/* End About */

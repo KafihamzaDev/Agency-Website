@@ -601,7 +601,7 @@ header .container {
 
 /* Start Feature */
 .feature {
-  padding-block-end: var(--section-padding);
+  padding-block: 120px;
 }
 .feature .container {
   display: grid;
@@ -664,6 +664,11 @@ header .container {
 /* End Feature */
 
 /* Start Stats */
+.stats {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-100%);
+}
 .stats .container {
   width: 70%;
   background-image: url("../images/stats-bg.jpg");
@@ -676,6 +681,7 @@ header .container {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 36px 24px;
   list-style: none;
+  margin-bottom: 0;
 }
 .stats .container .stats-card li .card-text {
   text-align: center;
@@ -694,3 +700,71 @@ header .container {
   line-height: 1.7;
 }
 /* End Stats */
+
+/* Start Project */
+.project {
+  background-color: var(--cultured);
+  padding-block: 120px;
+  position: relative;
+}
+.project .container {
+  text-align: center;
+}
+.project .container .pp {
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  color: var(--violet-blue-crayola);
+  font-weight: var(--fw-700);
+  margin-block-end: 16px;
+  margin-top: 0;
+}
+.project .container h2 {
+  font-size: var(--fs-2);
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  margin-top: 0;
+}
+.project .container .grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  gap: 25px;
+}
+.project .container .grid-list .card {
+  max-width: 100%;
+  background-color: var(--white);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  height: 100%;
+}
+.project .container .grid-list .card img {
+  width: 100%;
+}
+.project .container .grid-list .card .card-content {
+  text-align: start;
+  padding: 10px 40px 40px;
+}
+
+.project .container .grid-list .card .card-content h3 a {
+  font-size: var(--fs-3);
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  text-decoration: none;
+  transition: var(--transition-1);
+}
+.project .container .grid-list .card .card-content h3 a:hover {
+  color: var(--violet-blue-crayola);
+}
+.project .container .grid-list .card .card-content p {
+  margin-block: 16px 20px;
+}
+.project .container .grid-list .card .card-content .card-meta-list {
+  display: flex;
+  gap: 20px;
+}
+/* End Project */

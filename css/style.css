@@ -606,12 +606,23 @@ header .container {
 .feature .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 50px;
 }
+@media (max-width: 531px) {
+  .feature .container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  .feature .container .text {
+    max-width: 100%;
+  }
+}
+
 .feature .container img {
-  width: 600px;
+  width: 100%;
 }
+
 .feature .container .text {
-  max-width: 550px;
+  max-width: 80%;
 }
 .feature .container .text .p {
   font-size: var(--fs-7);

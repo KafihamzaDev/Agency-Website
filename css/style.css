@@ -746,7 +746,7 @@ header .container {
 }
 .project .container .grid-list .card .card-content {
   text-align: start;
-  padding: 10px 40px 40px;
+  padding: 40px;
 }
 
 .project .container .grid-list .card .card-content h3 a {
@@ -768,3 +768,40 @@ header .container {
   gap: 20px;
 }
 /* End Project */
+
+/* Start Cta */
+.cta {
+  background-color: var(--charcoal);
+}
+.cta .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 100px 60px;
+  border-block-end: 1px solid var(--cadet-blue-crayola_a20);
+}
+.cta .container h2 {
+  max-width: 30ch;
+  margin-block-end: 0;
+  color: var(--white);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+}
+.cta .container a {
+  min-width: max-content;
+  background-color: var(--violet-blue-crayola);
+  color: var(--white);
+  border: none;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-1);
+  will-change: transform;
+  text-decoration: none;
+}
+.cta .container a:hover {
+  transform: translateY(-4px);
+}
+/* End Cta */

@@ -665,14 +665,16 @@ header .container {
 
 /* Start Stats */
 .stats {
-  position: absolute;
   width: 100%;
-  transform: translateY(-100%);
+  background-image: linear-gradient(
+    to bottom,
+    var(--white) 50%,
+    var(--cultured) 50%
+  );
 }
 .stats .container {
   width: 70%;
   background-image: url("../images/stats-bg.jpg");
-  /* text-align: center; */
   border-radius: var(--radius-8);
 }
 .stats .container .stats-card {
@@ -705,7 +707,6 @@ header .container {
 .project {
   background-color: var(--cultured);
   padding-block: 120px;
-  position: relative;
 }
 .project .container {
   text-align: center;
